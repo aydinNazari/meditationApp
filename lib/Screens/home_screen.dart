@@ -55,6 +55,12 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
           ),
+          ListView.builder(
+              itemCount: 4,
+              shrinkWrap: true,
+              scrollDirection: Axis.horizontal,
+              physics: NeverScrollableScrollPhysics(),
+              itemBuilder: (context, index) {})
         ],
       ),
     );
