@@ -134,11 +134,54 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 Positioned(
-                    child: SizedBox(
-                  width: size.width / 2.8,
-                  height: size.width / 3,
-                      child: Image.asset(''),
-                ))
+                  right: 0,
+                  child: SizedBox(
+                    width: size.width / 2,
+                    height: size.width / 2,
+                    child: Image.asset(
+                        'assets/images/2844687-removebg-preview 1.png'),
+                  ),
+                ),
+                Positioned(
+                    left: 30,
+                    bottom: 20,
+                    child: Container(
+                      width: size.width / 2.5,
+                      height: size.width / 8,
+                      decoration: const BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                          color: Color(0xff253334)),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            'watch now',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w600,
+                                fontSize: size.width / 25),
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Container(
+                            width: 15,
+                            height: 15,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              shape: BoxShape.circle,
+                            ),
+                            child: Center(
+                              child: Icon(
+                                size: 15,
+                                Icons.play_arrow,
+                                color: Colors.black,
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                    ))
               ],
             ),
           )
