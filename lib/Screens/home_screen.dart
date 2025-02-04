@@ -11,7 +11,7 @@ class HomeScreen extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           const SizedBox(
             height: 60,
@@ -33,34 +33,64 @@ class HomeScreen extends StatelessWidget {
           ),
           Padding(
             padding: EdgeInsets.only(left: size.width / 25),
-            child: Text(
-              textAlign: TextAlign.start,
-              softWrap: true,
-              'Welcome back, Afreen!',
-              style: GoogleFonts.alegreya(
-                color: Colors.white,
-                fontSize: size.width / 13,
+            child: Align(
+              alignment: Alignment.topLeft,
+              child: Text(
+                textAlign: TextAlign.start,
+                softWrap: true,
+                'Welcome back, Afreen!',
+                style: GoogleFonts.alegreya(
+                  color: Colors.white,
+                  fontSize: size.width / 13,
+                ),
               ),
             ),
           ),
           Padding(
             padding: EdgeInsets.only(left: size.width / 25),
-            child: Text(
-              textAlign: TextAlign.start,
-              softWrap: true,
-              'How are you feeling today?',
-              style: GoogleFonts.alegreyaSans(
-                color: Colors.white70,
-                fontSize: size.width / 18,
+            child: Align(
+              alignment: Alignment.topLeft,
+              child: Text(
+                textAlign: TextAlign.start,
+                softWrap: true,
+                'How are you feeling today?',
+                style: GoogleFonts.alegreyaSans(
+                  color: Colors.white70,
+                  fontSize: size.width / 18,
+                ),
               ),
             ),
           ),
-          ListView.builder(
-              itemCount: 4,
-              shrinkWrap: true,
-              scrollDirection: Axis.horizontal,
-              physics: NeverScrollableScrollPhysics(),
-              itemBuilder: (context, index) {})
+          const SizedBox(
+            height: 20,
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: size.width / 35),
+            child: SizedBox(
+              height: size.width / 6,
+              width: size.width / 1,
+              child: ListView.builder(
+                  itemCount: 4,
+                  shrinkWrap: false,
+                  scrollDirection: Axis.horizontal,
+                  physics: const NeverScrollableScrollPhysics(),
+                  itemBuilder: (context, index) {
+                    return Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 13),
+                      child: Container(
+                        width: size.width / 6,
+                        height: size.width / 6,
+                        decoration: const BoxDecoration(
+                            color: Colors.white,
+                            //  image: DecorationImage(image: AssetImage('assets/icons/Vector.png')),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(20))),
+                        child: Image.asset('assets/icons/Vector.png'),
+                      ),
+                    );
+                  }),
+            ),
+          )
         ],
       ),
     );
