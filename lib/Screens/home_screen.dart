@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:untitled1/widgets/home_screen_card_widget.dart';
 import 'package:untitled1/widgets/horizantal_menu_bar_card_widget.dart';
 
 import '../contant.dart';
@@ -94,97 +95,18 @@ class HomeScreen extends StatelessWidget {
             height: 10,
           ),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: size.width / 25),
-            child: Stack(
-              children: [
-                Container(
-                  width: size.width,
-                  height: size.height / 4,
-                  decoration: const BoxDecoration(
-                      color: Color(0xffF7F3F0),
-                      borderRadius: BorderRadius.all(Radius.circular(20))),
-                ),
-                Positioned(
-                  left: 30,
-                  top: 30,
-                  bottom: 0,
-                  child: SizedBox(
-                    width: size.width / 2.2,
-                    child: Text(
-                      'Meditation 101',
-                      style: GoogleFonts.alegreya(
-                          color: Colors.black,
-                          fontSize: size.width / 15,
-                          fontWeight: FontWeight.w500),
-                    ),
-                  ),
-                ),
-                Positioned(
-                  left: 30,
-                  bottom: 100,
-                  child: SizedBox(
-                    width: size.width / 2.2,
-                    child: Text(
-                      'Techniques, Benefits, and a Beginner’s How-To',
-                      style: GoogleFonts.alegreya(
-                          color: Colors.black,
-                          fontSize: size.width / 25,
-                          fontWeight: FontWeight.w500),
-                    ),
-                  ),
-                ),
-                Positioned(
-                  right: 0,
-                  child: SizedBox(
-                    width: size.width / 2,
-                    height: size.width / 2,
-                    child: Image.asset(
-                        'assets/images/2844687-removebg-preview 1.png'),
-                  ),
-                ),
-                Positioned(
-                    left: 30,
-                    bottom: 20,
-                    child: Container(
-                      width: size.width / 2.5,
-                      height: size.width / 8,
-                      decoration: const BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(10)),
-                          color: Color(0xff253334)),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            'watch now',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.w600,
-                                fontSize: size.width / 25),
-                          ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          Container(
-                            width: 15,
-                            height: 15,
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              shape: BoxShape.circle,
-                            ),
-                            child: Center(
-                              child: Icon(
-                                size: 15,
-                                Icons.play_arrow,
-                                color: Colors.black,
-                              ),
-                            ),
-                          )
-                        ],
-                      ),
-                    ))
-              ],
-            ),
-          )
+              padding: EdgeInsets.symmetric(horizontal: size.width / 25),
+              child: const HomeScreenCardWidget(
+                  txt1: 'Meditation 101',
+                  txt2: 'Techniques, Benefits, and a Beginner’s How-To',
+                  imgUrl: 'assets/images/2844687-removebg-preview 1.png')),
+          SizedBox(height: size.height/30,),
+          Padding(
+              padding: EdgeInsets.symmetric(horizontal: size.width / 25),
+              child: const HomeScreenCardWidget(
+                  txt1: 'Cardio Meditation',
+                  txt2: 'Basics of Yoga for Beginners or Experienced Professionals',
+                  imgUrl: 'assets/images/2831156-removebg-preview 1.png'))
         ],
       ),
     );
