@@ -19,7 +19,7 @@ class HomeScreenCardWidget extends StatelessWidget {
       children: [
         Container(
           width: size.width,
-          height: size.height / 4,
+          height: size.height / 4.2,
           decoration: const BoxDecoration(
               color: Color(0xffF7F3F0),
               borderRadius: BorderRadius.all(Radius.circular(20))),

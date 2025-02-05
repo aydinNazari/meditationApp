@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:untitled1/Screens/home_screen.dart';
 
+import 'Screens/profile_screen.dart';
+import 'Screens/sound_screen.dart';
+
 List<String> horizontalMenuBarImgUrlList = [
   'assets/icons/Vector.png',
   'assets/icons/Relax.png',
@@ -13,8 +16,8 @@ List<String> horizontalMenuBarTextUrlList = [
   'Focus',
   'Anxious'
 ];
-List<Widget> screenList=[
-  HomeScreen(),
-  SoundScreen(),
-  ProfileScreen(),
+List<Widget> pageList=[
+  const HomeScreen(),
+  const SoundScreen(),
+  const ProfileScreen(),
 ];

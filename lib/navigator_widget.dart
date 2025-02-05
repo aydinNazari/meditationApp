@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'colors/color.dart';
-import 'constant/constant.dart';
+import 'color/color.dart';
+import 'contant.dart';
 
 class NavigatorWidget extends StatefulWidget {
   final int? indexCurrentPage;
-
 
   const NavigatorWidget({super.key, this.indexCurrentPage});
 
@@ -20,7 +19,7 @@ class _NavigatorWidgetState extends State<NavigatorWidget> {
   void initState() {
     super.initState();
     currentPage =
-    widget.indexCurrentPage == null ? 0 : widget.indexCurrentPage!;
+        widget.indexCurrentPage == null ? 0 : widget.indexCurrentPage!;
   }
 
   @override
@@ -58,31 +57,33 @@ class _NavigatorWidgetState extends State<NavigatorWidget> {
                 },
                 items: [
                   BottomNavigationBarItem(
-                    activeIcon: Icon(
-                      size: size.width / 18,
-                      Icons.home_rounded,
-                      color: navigatorActiveIconBackground,
+                    activeIcon: Container(
+                      width: size.width / 10,
+                      height: size.width / 10,
+                     // color: Colors.white,
+                      child: Image.asset('assets/icons/Home(2).png'),
                     ),
-                    backgroundColor: navigatorBackgroundColor,
-                    icon: Icon(
-                      size: size.width / 18,
-                      Icons.home_outlined,
-                      color: navigatorIconBackground,
+                    backgroundColor: Colors.white,
+                    icon: Container(
+                      width: size.width / 10,
+                      height: size.width / 10,
+
+                      child: Image.asset('assets/icons/Home(2).png'),
                     ),
                     //label: 'Home',
                     label: '',
                   ),
                   BottomNavigationBarItem(
-                    activeIcon: Icon(
-                      Icons.search_rounded,
-                      size: size.width / 18,
-                      color: navigatorActiveIconBackground,
+                    activeIcon: SizedBox(
+                      width: size.width / 10,
+                      height: size.width / 10,
+                      child: Image.asset('assets/icons/Sound.png'),
                     ),
-                    backgroundColor: navigatorBackgroundColor,
-                    icon: Icon(
-                      size: size.width / 18,
-                      Icons.search_outlined,
-                      color: navigatorIconBackground,
+                    backgroundColor: Colors.white,
+                    icon: SizedBox(
+                      width: size.width / 10,
+                      height: size.width / 10,
+                      child: Image.asset('assets/icons/Sound(1).png'),
                     ),
                     //label: 'Home',
                     label: '',
@@ -99,58 +100,20 @@ class _NavigatorWidgetState extends State<NavigatorWidget> {
                     //label: 'Search',
                   ),*/
                   BottomNavigationBarItem(
-                    backgroundColor: navigatorBackgroundColor,
-                    activeIcon: Center(
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 5),
-                        child: Icon(
-                          Icons.add_box,
-                          size: size.width / 15,
-                          color: navigatorActiveIconBackground,
-                        ),
-                      ),
+                    backgroundColor: Colors.grey,
+                    activeIcon: SizedBox(
+                      width: size.width / 10,
+                      height: size.width / 10,
+                      child: Image.asset('assets/icons/User(1).png'),
                     ),
-                    icon: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 5),
-                      child: Icon(
-                        Icons.add_box_outlined,
-                        size: size.width / 15,
-                        color: navigatorIconBackground,
-                      ),
+                    icon: SizedBox(
+                      width: size.width / 10,
+                      height: size.width / 10,
+                      child: Image.asset('assets/icons/Profile(1).png'),
                     ),
                     label: '',
                     // label: 'Add',
                   ),
-                  BottomNavigationBarItem(
-                    backgroundColor: navigatorBackgroundColor,
-                    activeIcon: Icon(
-                      size: size.width / 18,
-                      Icons.notifications,
-                      color: navigatorActiveIconBackground,
-                    ),
-                    icon: Icon(
-                      size: size.width / 18,
-                      Icons.notifications_outlined,
-                      color: navigatorIconBackground,
-                    ),
-                    label: '',
-                    //label: 'Notification',
-                  ),
-                  BottomNavigationBarItem(
-                    backgroundColor: navigatorBackgroundColor,
-                    activeIcon: Icon(
-                      size: size.width / 18,
-                      Icons.person,
-                      color: navigatorActiveIconBackground,
-                    ),
-                    icon: Icon(
-                      size: size.width / 18,
-                      Icons.person_outlined,
-                      color: navigatorIconBackground,
-                    ),
-                    //label: 'Profile',
-                    label: '',
-                  )
                 ],
               ),
             ),

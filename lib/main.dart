@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:untitled1/color/color.dart';
+import 'package:untitled1/navigator_widget.dart';
 
 import 'Screens/home_screen.dart';
 import 'login_screen.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
             seedColor: Colors.deepPurple, background: backGroundColor),
         useMaterial3: true,
       ),
-      home: const HomeScreen(),
+      home: const NavigatorWidget(),
     );
   }
 }

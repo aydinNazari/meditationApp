@@ -13,8 +13,8 @@ class IconWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return SizedBox(
-      width: size.width / 8,
-      height: size.width / 8,
+      width: size.width / 6,
+      height: size.width / 6,
       child: Image.asset(photoUrl),
     );
   }
