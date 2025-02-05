@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:untitled1/color/color.dart';
 
 import 'Screens/home_screen.dart';
 import 'login_screen.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
-            seedColor: Colors.deepPurple, background: const Color(0xff2A3839)),
+            seedColor: Colors.deepPurple, background: backGroundColor),
         useMaterial3: true,
       ),
       home: const HomeScreen(),

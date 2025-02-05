@@ -26,29 +26,26 @@ class HomeScreenCardWidget extends StatelessWidget {
         ),
         Positioned(
           left: 30,
-          top: 30,
+          top: 35,
           bottom: 0,
-          child: SizedBox(
-            width: size.width / 2.2,
-            child: Text(
-              txt1,
-              style: GoogleFonts.alegreya(
-                  color: Colors.black,
-                  fontSize: size.width / 15,
-                  fontWeight: FontWeight.w500),
-            ),
+          child: Text(
+            txt1,
+            style: GoogleFonts.alegreya(
+                color: Colors.black,
+                fontSize: txt1.length > 14 ? size.width/16 :size.width / 15,
+                fontWeight: FontWeight.w500),
           ),
         ),
         Positioned(
           left: 30,
-          bottom: 100,
+          bottom: txt2.length > 55 ? 100 :100,
           child: SizedBox(
             width: size.width / 2.2,
             child: Text(
               txt2,
               style: GoogleFonts.alegreya(
                   color: Colors.black,
-                  fontSize: size.width / 25,
+                  fontSize: size.width / 28,
                   fontWeight: FontWeight.w500),
             ),
           ),
