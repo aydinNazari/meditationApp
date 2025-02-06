@@ -22,7 +22,7 @@ class SoundScreen extends StatelessWidget {
               children: [
                 IconWidget(photoUrl: 'assets/icons/more.png'),
                 Spacer(),
-                IconWidget(photoUrl: 'assets/icons/Logo.png'),
+                IconWidget(photoUrl: 'assets/icons/logo.png'),
                 Spacer(),
                 IconWidget(photoUrl: 'assets/icons/Ellipse 2.png'),
               ],
