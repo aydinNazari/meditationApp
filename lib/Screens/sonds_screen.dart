@@ -8,7 +8,7 @@ class SoundsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size=MediaQuery.of(context).size;
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -29,15 +29,88 @@ class SoundsScreen extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(height: 10,),
-            Container(
-              width: size.width,
-              height: size.height/4,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(15))
-              ),
-              child: Image.asset('assets/images/Rectangle 23.png'),
-            )
+            const SizedBox(
+              height: 10,
+            ),
+            Stack(
+              children: [
+                Container(
+                  width: size.width,
+                  height: size.height / 4,
+                  decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(15))),
+                  child: Image.asset('assets/images/Rectangle 23.png'),
+                ),
+                Positioned(
+                  left: 65,
+                  top: 45,
+                  child: Text(
+                    'Relax Sounds',
+                    style: GoogleFonts.alegreya(
+                        color: Colors.white,
+                        fontSize: size.width / 14.5,
+                        fontWeight: FontWeight.w600),
+                  ),
+                ),
+                Positioned(
+                  left: 65,
+                  top: 85,
+                  child: SizedBox(
+                    width: size.width/2,
+                    child: Text(
+                      'Sometimes the most productive thing you can do is relax.',
+                      style: GoogleFonts.alegreya(
+                          color: Colors.grey.shade100,
+                          fontSize: size.width /28,
+                          height: 1.1,
+                          fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                )  ,
+                Positioned(
+                  left: 65,
+                  bottom: 40,
+                  child: Container(
+                    width: size.width/2.7,
+                    height: size.height/20,
+                    decoration: const BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.all(Radius.circular(15))
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'watch now',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w600,
+                              fontSize: size.width / 25),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 15,
+                          height: 15,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            shape: BoxShape.circle,
+                          ),
+                          child: Center(
+                            child: Icon(
+                              size: 15,
+                              Icons.play_arrow,
+                              color: Colors.black,
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                )
+              ],
+            ),
           ],
         ),
       ),
