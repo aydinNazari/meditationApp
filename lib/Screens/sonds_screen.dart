@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:untitled1/widgets/home_screen_card_widget.dart';
-import 'package:untitled1/widgets/horizantal_menu_bar_card_widget.dart';
 
-import '../contant.dart';
 import '../widgets/icon_widget.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class SoundsScreen extends StatelessWidget {
+  const SoundsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
+    Size size=MediaQuery.of(context).size;
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -83,9 +80,9 @@ class HomeScreen extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(horizontal: 13),
                         child: HorizontalMenuBarCard(
                           horizontalMenuBarTextUrlList:
-                              horizontalMenuBarTextUrlList,
+                          horizontalMenuBarTextUrlList,
                           horizontalMenuBarImgUrlList:
-                              horizontalMenuBarImgUrlList,
+                          horizontalMenuBarImgUrlList,
                           index: index,
                         ),
                       );
