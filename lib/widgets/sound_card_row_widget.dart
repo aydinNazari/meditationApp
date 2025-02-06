@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+import '../contant.dart';
 
 class SoundCardRowWidget extends StatelessWidget {
   const SoundCardRowWidget({
     super.key,
-    required this.imgUrl,
-    required this.txt1,
-    required this.txt2,
-    required this.txt3,
+    //required this.imgUrlList,
+    required this.index,
     //  required this.size,
   });
 
-  final String imgUrl;
-  final String txt1;
-  final String txt2;
-  final String txt3;
+
+
+  final int index;
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class SoundCardRowWidget extends StatelessWidget {
           height: size.width / 5,
           decoration: const BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(25))),
-          child: Image.asset('assets/images/Rectangle_22.png'),
+          child: Image.asset(imgSoundsList[index]),
         ),
         Padding(
           padding: const EdgeInsets.only(left: 18),
@@ -35,14 +35,14 @@ class SoundCardRowWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Painting Forest',
+                txt1SoundsList[index],
                 style: GoogleFonts.alegreyaSans(
                     color: Colors.white,
                     fontSize: size.width / 18,
                     fontWeight: FontWeight.w600),
               ),
               Text(
-                '59899 Listening',
+                txt2SoundsList[index],
                 style: GoogleFonts.alegreyaSans(
                     color: Colors.grey.shade600,
                     fontSize: size.width / 30,
@@ -55,7 +55,7 @@ class SoundCardRowWidget extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(right: 10),
           child: Text(
-            '20 Min',
+            txt3SoundsList[index],
             style: GoogleFonts.alegreyaSans(
                 color: Colors.grey.shade600,
                 fontSize: size.width / 30,

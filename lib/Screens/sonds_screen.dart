@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../widgets/icon_widget.dart';
+import '../widgets/sound_card_row_widget.dart';
 
 class SoundsScreen extends StatelessWidget {
   const SoundsScreen({super.key});
@@ -117,7 +118,9 @@ class SoundsScreen extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return Padding(
                     padding: EdgeInsets.symmetric(horizontal: size.width / 16),
-                    child: SoundCardRowWidget(),
+                    child: SoundCardRowWidget(
+                      index: index,
+                    ),
                   );
                 })
           ],
