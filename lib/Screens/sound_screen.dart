@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:untitled1/contant.dart';
 
 import '../widgets/icon_widget.dart';
 
 class SoundScreen extends StatelessWidget {
-  const SoundScreen({Key? key}) : super(key: key);
+  const SoundScreen({Key? key, required this.index}) : super(key: key);
+
+  final int index;
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +45,7 @@ class SoundScreen extends StatelessWidget {
           Text(
             textAlign: TextAlign.start,
             softWrap: true,
-            'Painting Forest!',
+            txt1SoundsList[index],
             style: GoogleFonts.alegreya(
               color: Colors.white,
               fontSize: size.width / 13,

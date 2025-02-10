@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:page_transition/page_transition.dart';
+import 'package:untitled1/Screens/sound_screen.dart';
 
 import '../widgets/icon_widget.dart';
 import '../widgets/sound_card_row_widget.dart';
@@ -118,8 +120,17 @@ class SoundsScreen extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return Padding(
                     padding: EdgeInsets.symmetric(horizontal: size.width / 16),
-                    child: SoundCardRowWidget(
-                      index: index,
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            PageTransition(
+                                type: PageTransitionType.bottomToTop,
+                                child:  SoundScreen(index: index,)));
+                      },
+                      child: SoundCardRowWidget(
+                        index: index,
+                      ),
                     ),
                   );
                 })
@@ -129,5 +140,3 @@ class SoundsScreen extends StatelessWidget {
     );
   }
 }
-
-
