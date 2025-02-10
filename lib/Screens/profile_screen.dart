@@ -83,7 +83,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               child: TabBarView(
                 children: [
                   Image.asset('assets/images/Stats.png'),
-                  Center(child: Text('Ayarlar İçeriği', style: TextStyle(color: Colors.white))),
+                  const Center(child: Text('Ayarlar İçeriği', style: TextStyle(color: Colors.white))),
                 ],
               ),
             ),
